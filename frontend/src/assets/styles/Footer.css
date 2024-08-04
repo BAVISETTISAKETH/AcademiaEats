@@ -1,0 +1,18 @@
+/* src/assets/styles/Footer.css */
+.footer {
+  color: #ff9800;
+  background-color: transparent; /* Set background to transparent */
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media img {
+  width: 30px;
+  margin: 0 10px;
+}
