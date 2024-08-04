@@ -1,0 +1,85 @@
+/* src/assets/styles/LandingPage.css */
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: white; /* Ensure text is readable on the background image */
+  position: relative;
+}
+
+.landing-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+  z-index: 1;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end; /* Align items to the right */
+  padding: 20px;
+  text-align: left; /* Align text to the left */
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align text to the left within the container */
+  text-align: left; /* Ensure text is left-aligned */
+  max-width: 50%; /* Adjust this value as needed */
+}
+
+.main-title {
+  font-size: 6em; /* Make the title much larger */
+  font-weight: bold;
+  color: #fff; /* White text for contrast */
+  margin: 0;
+  padding: 10px 50px;
+  animation: slideInFromLeft 1s ease-in-out;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.main-slogan {
+  font-size: 2em; /* Increase the font size of the slogan */
+  margin-top: 20px;
+  max-width: 800px; /* Limit the width for better readability */
+  color: #fff; /* White text for contrast */
+  padding: 10px 20px;
+  animation: slideInFromRight 1.5s ease-in-out;
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
